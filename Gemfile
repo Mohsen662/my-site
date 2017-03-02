@@ -18,6 +18,13 @@ gem 'devise'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views'
 
+group :development do
+  gem 'capistrano', '~> 3.7', '>= 3.7.2'
+  gem 'capistrano-bundler', '~> 1.2'
+  gem 'capistrano-rails', '~> 1.2', '>= 1.2.2'
+  gem 'capistrano-rbenv', github: "capistrano/rbenv"
+end
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
