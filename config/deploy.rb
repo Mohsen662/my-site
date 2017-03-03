@@ -9,7 +9,8 @@ set :repo_url, 'git@github.com:mohsen662/my-site.git'
 
 # Default deploy_to directory is /var/www/my_app
 set :deploy_to, '/home/deploy/my-site'
-set :linked_files, %w{config/database.yml config/secrets/yml}
+set :linked_files, fetch(:linked_files, []).push('config/database.yml')
+#set :linked_files, %w{config/database.yml config/secrets.yml}
 set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 # Default value for :scm is :git
